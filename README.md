@@ -1,119 +1,65 @@
 # YouTube Video Analytics - Regression Analysis
 
-## About the Project
+## About
 
-This project was built as part of my Machine Learning learning journey. The objective was to understand the complete machine learning workflow by predicting the **Average View Percentage** of YouTube videos using different regression techniques.
+This project was completed as part of my Machine Learning learning journey. The objective was to understand the complete ML workflow by cleaning a YouTube dataset, performing exploratory data analysis, and building regression models to predict video popularity (like_count).
 
-The dataset contains approximately 30,000 YouTube video records with information such as video duration, likes, comments, and viewer engagement.
-
-Instead of focusing only on building models, I also learned how to clean data, explore it visually, evaluate models, apply feature scaling, and save trained models for future use.
-
----
-
-## Project Goal
-
-The target variable for this project is:
-
-Average View Percentage (`avg_view_percentage`)
-
-Three regression models were built and compared:
-
-- Simple Linear Regression
-- Multiple Linear Regression
-- Polynomial Regression (Degree = 3)
+The project covers the complete pipeline from data preprocessing to model evaluation using Python and Scikit-learn.
 
 ---
 
 ## Project Workflow
 
-### 1. Data Cleaning
+The project is divided into six notebooks:
 
-The first step was cleaning the dataset before training any model.
+1. Data Cleaning
+   - Handle missing values
+   - Remove duplicates
+   - Convert YouTube duration to seconds
+   - Drop unnecessary columns
+   - Save the cleaned dataset
 
-Tasks performed:
+2. Exploratory Data Analysis (EDA)
+   - Histograms
+   - Boxplots
+   - Scatter plots
+   - Correlation heatmap
+   - Pairplot
 
-- Checked for missing values
-- Removed duplicate rows
-- Dropped unnecessary columns
-- Saved the cleaned dataset
+3. Simple Linear Regression
+   - Predict `like_count` using `view_count`
 
----
+4. Multiple Linear Regression
+   - Predict `like_count` using:
+     - `view_count`
+     - `comment_count`
+     - `duration_seconds`
 
-### 2. Exploratory Data Analysis (EDA)
+5. Polynomial Regression
+   - Degree 3 polynomial using `view_count`
 
-After cleaning the data, I explored it using different visualizations to understand the relationships between variables.
-
-Some of the plots include:
-
-- Histograms
-- Boxplots
-- Scatter plots
-- Correlation heatmap
-- Pair plot
-
----
-
-### 3. Simple Linear Regression
-
-The first model used only one feature:
-
-- Video Duration
-
-to predict:
-
-- Average View Percentage
-
-This helped me understand how linear regression works with a single independent variable.
+6. Model Comparison
+   - Compare model performance
+   - Apply feature scaling
+   - Save trained models
 
 ---
 
-### 4. Multiple Linear Regression
+## Results
 
-The second model used three input features:
+| Model | R² Score |
+|--------|----------|
+| Simple Linear Regression | 0.53 |
+| Multiple Linear Regression | 0.52 |
+| Polynomial Regression | 0.70 |
 
-- Video Duration
-- Likes
-- Comments
-
-The goal was to check whether adding more information improves prediction accuracy.
-
----
-
-### 5. Polynomial Regression
-
-Finally, I trained a Polynomial Regression model using only Video Duration with a polynomial degree of 3.
-
-This was done to check whether a non-linear relationship exists between video duration and viewer retention.
+Among the three models, Polynomial Regression performed the best on this dataset.
 
 ---
 
-### 6. Feature Scaling
+## Technologies Used
 
-To understand preprocessing, I also applied **StandardScaler** and compared the model's performance before and after scaling.
-
----
-
-## Model Performance
-
-
- Simple Linear Regression | MAE=24.94 | RMSE=28.78 | R² Score=-0.000058 |
- Multiple Linear Regression | MAE=24.94 | RMSE=28.79 | R² Score=-0.000151 |
- Polynomial Regression | MAE=24.95 | RMSE=28.79 | R² Score=-0.000431 |
-
----
-
-## Observations
-
-One interesting finding from this project was that none of the three models performed well.
-
-The correlation analysis showed that the selected features had almost no relationship with the target variable. Because of this, even adding more features or using Polynomial Regression did not improve the predictions.
-
-Although the models did not achieve a good R² score, this was an important learning experience because it showed that machine learning models are only as good as the information available in the data.
-
----
-
-## Libraries Used
-
+- Python
 - Pandas
 - NumPy
 - Matplotlib
@@ -124,7 +70,7 @@ Although the models did not achieve a good R² score, this was an important lear
 
 ---
 
-## How to Run
+## Running the Project
 
 Clone the repository:
 
@@ -132,40 +78,39 @@ Clone the repository:
 git clone git@github.com:KartikayCT/Video_Analysis_Project.git
 ```
 
-Install the required libraries:
+Install the dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Launch Jupyter Notebook:
+Launch Jupyter Notebook and run the notebooks in numerical order from 01 to 06.
 
-```bash
-jupyter notebook
+---
+
+## Repository Structure
+
 ```
-
-Run the notebooks in the following order:
-
-1. Data Cleaning
-2. Exploratory Data Analysis
-3. Simple Linear Regression
-4. Multiple Linear Regression
-5. Polynomial Regression
-6. Feature Scaling and Model Analysis
+notebooks/
+processed/
+models/
+results/
+images/
+README.md
+requirements.txt
+youtube_data.csv
+```
 
 ---
 
 ## What I Learned
 
-Through this project, I learned how to:
-
-- Clean and preprocess datasets
-- Perform exploratory data analysis
-- Train regression models using Scikit-learn
-- Evaluate models using MAE, RMSE, and R² Score
-- Apply StandardScaler
-- Understand underfitting and overfitting
-- Save trained models using Joblib
+- Data cleaning and preprocessing
+- Exploratory Data Analysis (EDA)
+- Linear and Polynomial Regression
+- Model evaluation using MAE, RMSE and R²
+- Feature scaling with StandardScaler
+- Saving trained models with Joblib
 
 ---
 
