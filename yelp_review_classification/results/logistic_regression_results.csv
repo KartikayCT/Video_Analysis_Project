@@ -1,0 +1,2 @@
+Model,Accuracy,Precision,Recall,F1_Score
+Multinomial Logistic Regression,0.8605,0.8602100892571779,0.8605,0.8603379350207826

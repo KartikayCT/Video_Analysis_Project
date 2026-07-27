@@ -17,6 +17,12 @@ ENV/
 # -----------------------------
 .ipynb_checkpoints/
 
+# Large Yelp dataset files
+yelp_review_classification/data/train.csv
+yelp_review_classification/data/test.csv
+yelp_review_classification/data/processed/yelp_balanced_150k_cleaned.csv
+yelp_review_classification/data/processed/yelp_balanced_150k.csv
+
 # -----------------------------
 # VS Code
 # -----------------------------

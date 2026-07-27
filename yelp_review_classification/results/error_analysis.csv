@@ -1,0 +1,7 @@
+Actual Class,Predicted Class,Naive Bayes Errors,Logistic Regression Errors,Error Reduction
+Negative,Neutral,1426,850,576
+Negative,Positive,123,168,-45
+Neutral,Negative,1126,899,227
+Neutral,Positive,903,1059,-156
+Positive,Negative,440,219,221
+Positive,Neutral,1359,990,369
