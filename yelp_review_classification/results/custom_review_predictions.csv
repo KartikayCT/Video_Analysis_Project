@@ -1,0 +1,11 @@
+Review,Predicted Sentiment,Negative Probability,Neutral Probability,Positive Probability
+The food was absolutely fantastic and the staff were wonderful.,Positive,0.004747020237641866,0.00720156126141413,0.988051418500944
+The restaurant was okay. Nothing special but not terrible.,Neutral,0.044294260001848336,0.9543596978967708,0.0013460421013808308
+The service was extremely slow and the food was awful.,Negative,0.9834702938210966,0.015038710467356482,0.001490995711546764
+The food was not good.,Negative,0.9910566284941835,0.007606788292964457,0.001336583212851853
+The service was not bad.,Neutral,0.001690748218099926,0.9976253679489057,0.0006838838329943533
+I never liked this restaurant.,Negative,0.8114803528021691,0.08185110610579059,0.10666854109204035
+I would definitely come back again.,Positive,0.010041009042966984,0.1580653355571364,0.8318936553998967
+I would not recommend this restaurant.,Negative,0.9882458467063047,0.008491864966525736,0.0032622883271694785
+The food looked amazing but tasted terrible.,Negative,0.9011314361691373,0.035538981713028994,0.06332958211783368
+"The restaurant was expensive, but the experience was worth it.",Neutral,0.2788237199950991,0.4237420476641083,0.29743423234079264
